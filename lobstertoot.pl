@@ -30,4 +30,11 @@ for my $story (@{$stories}) {
   }
 
   $masto->post_status($toot);
+
+  push @{ $s->{lobsters}->{storiesdone} }, $story->{short_id};
+  shift @{ $s->{lobsters}->{storiesdone} } if scalar(@{ $s->{lobsters}->{storiesdone} }) > 500;
 }
+
+open my $fh, ">state.json" or die $!;
+print $fh encode_json($s);
+close $fh;
