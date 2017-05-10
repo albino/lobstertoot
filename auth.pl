@@ -29,12 +29,14 @@ $masto->authorize(
 say encode_json(
   {
     masto => {
+      instance => $inst,
       client_id => $masto->client_id,
       client_secret => $masto->client_secret,
       access_token => $masto->access_token,
     },
     lobsters => {
       url => "https://lobste.rs",
+      storiesdone => [],
     },
   }
 );
