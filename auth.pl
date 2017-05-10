@@ -3,7 +3,6 @@ use 5.010;
 use strict;
 use warnings;
 use Mastodon::Client;
-use YAML::Tiny;
 use IO::Prompt;
 use JSON::Tiny qw/encode_json/;
 
