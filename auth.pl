@@ -11,7 +11,7 @@ my $inst = prompt("Instance hostname (e.g. mastodon.social): ")->{value};
 my $masto = new Mastodon::Client (
   instance => $inst,
   name => "lobstertoot",
-  website => "https://git.fuwafuwa.moe/albino/lobstertoot",
+  website => "https://github.com/albino/lobstertoot",
   scopes => ["write"],
   coerce_entities => 1,
 );
